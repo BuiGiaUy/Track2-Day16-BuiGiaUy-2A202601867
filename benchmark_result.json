@@ -1,0 +1,30 @@
+{
+  "dataset": {
+    "file": "creditcard.csv",
+    "rows": 284807,
+    "features": 30,
+    "target": "Class",
+    "train_rows": 227845,
+    "test_rows": 56962
+  },
+  "configuration": {
+    "model": "LightGBM LGBMClassifier",
+    "device": "CPU",
+    "random_state": 42,
+    "test_size": 0.2,
+    "inference_benchmark_rows": 1000,
+    "single_row_repeats": 100
+  },
+  "metrics": {
+    "data_load_time_seconds": 2.5149500019999778,
+    "training_time_seconds": 3.333812707999982,
+    "best_iteration": 0,
+    "accuracy": 0.998156665847407,
+    "auc": 0.9655302698597729,
+    "f1": 0.6236559139784946,
+    "precision": 0.48066298342541436,
+    "recall": 0.8877551020408163,
+    "inference_latency_ms_per_row": 0.8900440200000048,
+    "throughput_rows_per_second": 293741.6577353493
+  }
+}
