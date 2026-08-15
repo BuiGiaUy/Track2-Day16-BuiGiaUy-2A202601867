@@ -2,25 +2,22 @@
 
 ## CP4 — CPU + LightGBM
 
-- [ ] Screenshot terminal chạy `python3 benchmark.py`, có toàn bộ output metrics.
+- [ ] `evidence/benchmark.png` chứa toàn bộ output, nhưng hiện metric chưa khớp `benchmark_result.json`.
 - [ ] File `benchmark_result.json` hợp lệ, có training time, AUC, accuracy,
       precision, recall, F1, inference latency và throughput.
 - [ ] Kết quả cho thấy benchmark dùng CPU; không bật GPU cho luồng bắt buộc.
 
 ## CP5 — Quan sát và báo cáo
 
-- [ ] Screenshot CPU/RAM/network trên VM: `top`, `free -h`, `ip -s link`,
-      hoặc tab Monitoring của Compute Engine.
-- [ ] Screenshot GCP Billing/Cost Reports, ghi nhận các dịch vụ đang phát sinh
-      chi phí nếu có.
-- [ ] File `CP5_REPORT_TEMPLATE.md` đã được điền bằng số liệu thật và nhận xét
-      ngắn 5–10 dòng.
+- [x] Screenshot network: `evidence/network_ip_s_link.png`.
+- [x] Screenshot GCP Billing Reports: `evidence/billing_reports.png`.
+- [x] Báo cáo chính toàn lab: `LAB16_REPORT.md`.
 
 ## Mã nguồn và CP6
 
 - [ ] Nộp source Terraform trong thư mục `terraform-gcp/` theo README.
-- [ ] Có bằng chứng CP6 chạy `terraform destroy` thành công và kiểm tra không
-      còn VM/resource đang chạy ngoài dự kiến.
+- [ ] Có bằng chứng CP6 chạy `terraform destroy` thành công với dòng
+      `Destroy complete! Resources: 16 destroyed.` trong `evidence/terraform_destroy.png`.
 
 ## Kiểm tra bảo mật trước khi nộp
 
@@ -30,3 +27,8 @@
 - [ ] Không nộp sensitive Terraform state (`terraform.tfstate`, state backup,
       hoặc file chứa secret).
 - [ ] Rà soát archive/screenshot lần cuối trước khi upload.
+
+## Artifact không được nộp
+
+- [ ] Loại `.terraform/`, `terraform.tfstate` và `terraform.tfstate.backup` khỏi archive.
+- [ ] Loại `.env`, credential, Kaggle key, access token, private key và secret khác khỏi archive.
